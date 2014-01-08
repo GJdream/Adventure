@@ -22,6 +22,7 @@
 		A65A944A187DD8CA00D4FCE3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A65A9448187DD8CA00D4FCE3 /* InfoPlist.strings */; };
 		A65A944C187DD8CA00D4FCE3 /* AdventureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A944B187DD8CA00D4FCE3 /* AdventureTests.m */; };
 		A65A9456187DE9EC00D4FCE3 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65A9455187DE9EC00D4FCE3 /* CheckMate.framework */; };
+		A65A94DF187DFB2600D4FCE3 /* RiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A94DE187DFB2600D4FCE3 /* RiddleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		A65A9449187DD8CA00D4FCE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A65A944B187DD8CA00D4FCE3 /* AdventureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdventureTests.m; sourceTree = "<group>"; };
 		A65A9455187DE9EC00D4FCE3 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../../../Downloads/CheckMate.framework; sourceTree = "<group>"; };
+		A65A94DD187DFB2600D4FCE3 /* RiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiddleViewController.h; sourceTree = "<group>"; };
+		A65A94DE187DFB2600D4FCE3 /* RiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiddleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				A65A942F187DD8CA00D4FCE3 /* AppDelegate.h */,
 				A65A9430187DD8CA00D4FCE3 /* AppDelegate.m */,
 				A65A9432187DD8CA00D4FCE3 /* Main.storyboard */,
+				A65A94DD187DFB2600D4FCE3 /* RiddleViewController.h */,
+				A65A94DE187DFB2600D4FCE3 /* RiddleViewController.m */,
 				A65A9435187DD8CA00D4FCE3 /* ViewController.h */,
 				A65A9436187DD8CA00D4FCE3 /* ViewController.m */,
 				A65A9438187DD8CA00D4FCE3 /* Images.xcassets */,
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65A94DF187DFB2600D4FCE3 /* RiddleViewController.m in Sources */,
 				A65A9437187DD8CA00D4FCE3 /* ViewController.m in Sources */,
 				A65A9431187DD8CA00D4FCE3 /* AppDelegate.m in Sources */,
 				A65A942D187DD8CA00D4FCE3 /* main.m in Sources */,
@@ -471,6 +477,7 @@
 				A65A9451187DD8CA00D4FCE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A65A9452187DD8CA00D4FCE3 /* Build configuration list for PBXNativeTarget "AdventureTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				A65A9454187DD8CA00D4FCE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-332" y="497"/>
         </scene>
-        <!--View Controller-->
+        <!--Riddle View Controller-->
         <scene sceneID="paO-5Z-fQ2">
             <objects>
-                <viewController id="7Ha-jz-gi5" sceneMemberID="viewController">
+                <viewController id="7Ha-jz-gi5" customClass="RiddleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dLl-Aw-JbY"/>
                         <viewControllerLayoutGuide type="bottom" id="jAw-mP-yOV"/>
@@ -74,15 +74,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You start to tell a joke, but the workers yell for you to shut up." translatesAutoresizingMaskIntoConstraints="NO" id="dpw-Y7-FlU">
-                                <rect key="frame" x="0.0" y="65" width="320" height="568"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You start to tell a joke, but the workers yell for you to shut up." translatesAutoresizingMaskIntoConstraints="NO" id="dpw-Y7-FlU">
+                                <rect key="frame" x="0.0" y="20" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-wh-XhO">
-                                <rect key="frame" x="20" y="202" width="112" height="30"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-wh-XhO">
+                                <rect key="frame" x="32" y="131" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tell another joke">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,8 +91,8 @@
                                     <segue destination="9Hv-mu-wkK" kind="push" id="cpa-TH-G8R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWU-hd-Zm9">
-                                <rect key="frame" x="20" y="269" width="186" height="30"/>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWU-hd-Zm9">
+                                <rect key="frame" x="32" y="198" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find a way out of the office">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,10 +101,50 @@
                                     <segue destination="JLb-SI-43P" kind="push" id="hQb-sL-8B1"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-tE-4v6">
+                                <rect key="frame" x="15" y="242" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-Nd-48a">
+                                <rect key="frame" x="174" y="242" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check Answer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="7Ha-jz-gi5" eventType="touchUpInside" id="mBk-13-YGC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is it Right?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXd-2a-NtW">
+                                <rect key="frame" x="96" y="285" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkG-tg-7yj">
+                                <rect key="frame" x="50" y="131" width="240" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Answer this Riddle correctly to reveal your options: "Thirty white horses on a red hill. First they champ, then they stamp, then they stand still."</string>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cqv-3t-ZQe"/>
+                    <connections>
+                        <outlet property="anotherJoke" destination="ouZ-wh-XhO" id="nlt-7O-TmT"/>
+                        <outlet property="answerField" destination="KxG-tE-4v6" id="1m7-ZH-Fgd"/>
+                        <outlet property="answerVerification" destination="nXd-2a-NtW" id="ECl-aO-a2U"/>
+                        <outlet property="checkAnswer" destination="HkN-Nd-48a" id="LvI-8e-Lsb"/>
+                        <outlet property="findAWayOutOfTheOffice" destination="nWU-hd-Zm9" id="Xh5-Zk-9xg"/>
+                        <outlet property="riddleQuestion" destination="HkG-tg-7yj" id="fdT-dG-hqg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MR-3r-y0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -922,8 +962,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="hQb-sL-8B1"/>
+        <segue reference="uf1-XB-GJn"/>
         <segue reference="2jk-aa-oll"/>
-        <segue reference="6x0-ve-apx"/>
-        <segue reference="L8p-Qy-cyy"/>
     </inferredMetricsTieBreakers>
 </document>
